@@ -49,9 +49,3 @@ btnChild.forEach((e) => {
 //   }
 // }
 
-// let isOpen = false;
-// menuIcon.addEventListener("click", () => {
-//   isOpen = true;
-//   isOpen ? (menuItem.style.display = "flex") : (menuItem.style.display = "none");
-// });
-
