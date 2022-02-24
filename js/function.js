@@ -10,14 +10,18 @@ AOS.init({
 // Add class for sticky menu
 let stickyHeader = document.querySelector("header");
 let logo = document.querySelector("#logo");
+let menuIcon = document.querySelector("#menuIcon");
+
 window.onscroll = () => {
   if (this.scrollY > 50) {
     // add class
     stickyHeader.classList.add("sticky");
     logo.src = "Images/logo.png";
+    menuIcon.style.color = "black";
   } else {
     // remove class
     stickyHeader.classList.remove("sticky");
+    menuIcon.style.color = "white";
     logo.src = "Images/logo2.png";
   }
 };
@@ -34,3 +38,20 @@ btnChild.forEach((e) => {
     e.classList.add("active");
   });
 });
+
+// function handleMenu () {
+//   let menuItem = document.querySelector("#menuItem");
+//   console.log(menuItem)
+//   if(menuItem.style.display === "block"){
+//     menuItem.style.display === "none"
+//   }else{
+//     menuItem.style.display === "block"
+//   }
+// }
+
+// let isOpen = false;
+// menuIcon.addEventListener("click", () => {
+//   isOpen = true;
+//   isOpen ? (menuItem.style.display = "flex") : (menuItem.style.display = "none");
+// });
+

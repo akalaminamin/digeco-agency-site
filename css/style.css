@@ -283,7 +283,9 @@ span {
   color: #111111;
   background: var(--whiteColor);
 }
-
+#menuIcon {
+  display: none;
+}
 /* ======================== HEADER SECTION STYLE END ======================== */
 
 /* ======================== HERO SECTION STYLE START ======================== */
@@ -611,41 +613,6 @@ span {
 #services .services-wrap .item-four:hover .icon i {
   background: #fff;
   color: #ffc048;
-}
-
-/* ======= ANIMATIONS ======= */
-#services .services-wrap .item-one,
-#services .services-wrap .item-two,
-#services .services-wrap .item-three,
-#services .services-wrap .item-four {
-  animation: moveUp 1s linear 1;
-  animation-delay: 10s;
-  visibility: hidden;
-  animation-fill-mode: forwards;
-}
-
-#services .services-wrap .item-two {
-  animation-delay: 11s;
-}
-
-#services .services-wrap .item-three {
-  animation-delay: 12s;
-}
-
-#services .services-wrap .item-four {
-  animation-delay: 13s;
-}
-
-@keyframes moveUp {
-  0% {
-    transform: translateY(200px);
-    visibility: visible;
-  }
-
-  100% {
-    transform: translateY(0px);
-    visibility: visible;
-  }
 }
 
 /* ======================== SERVICES SECTION STYLE END ======================== */
@@ -1192,8 +1159,20 @@ span {
     display: none;
     padding: 0;
   }
-  #header {
+  img#logo {
+    width: 150px;
+  }
+  .menu-white {
+    color: #fff;
+  }
+  .menu-wrap {
     display: none;
+  }
+  #header .main-header .menu-search-btn {
+    display: none;
+  }
+  #menuIcon {
+    display: block;
   }
   /* hero area */
   #hero {
@@ -1201,9 +1180,13 @@ span {
     padding: 25px 0px;
     margin-top: 0;
   }
+  .sticky {
+    margin-top: 0;
+  }
   #hero .hero-area {
     height: auto;
     flex-direction: column;
+    padding-top: 65px;
   }
   #hero .hero-area .hero-area-text h2 {
     font-size: 25px;
@@ -1277,7 +1260,7 @@ span {
 
 /* media devices */
 @media screen and (max-width: 992px) and (min-width: 576px) {
-    .container {
+  .container {
     max-width: 992px;
   }
   .col-25 {
@@ -1288,18 +1271,37 @@ span {
     display: none;
     padding: 0;
   }
-  #header {
+  img#logo {
+    width: 150px;
+  }
+  .menu-white {
+    color: #fff;
+  }
+  .menu-wrap {
     display: none;
+  }
+  #header .main-header {
+      padding: 0px 20px;
+  }
+  #header .main-header .menu-search-btn {
+    display: none;
+  }
+  #menuIcon {
+    display: block;
   }
   /* hero area */
   #hero {
-    padding: 25px;
     height: auto;
+    padding: 25px 20px;
+    margin-top: 0;
+  }
+  .sticky {
     margin-top: 0;
   }
   #hero .hero-area {
     height: auto;
     flex-direction: row;
+    margin-top: 65px;
   }
   #hero .hero-area .hero-area-text h2 {
     font-size: 29px;
